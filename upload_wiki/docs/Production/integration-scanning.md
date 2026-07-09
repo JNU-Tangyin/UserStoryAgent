@@ -1,0 +1,38 @@
+# Integration Scanning
+
+## Public Release Status
+
+- Source PDF: `Production/Integration Scanning.pdf`
+- Release mode: `sanitized_topic_outline`
+- Pages detected: 1
+- Original extracted characters: 6265
+
+## Retained Knowledge
+- Module context: Production provides shop-floor execution, CMMS, labeling, measurement operation, OEE, traceability, and production workbench context.
+- Document context: scanning and integration context.
+- Use in this repository: public-safe grounding for terminology, module meaning, operational constraints, and acceptance-related interpretation.
+
+## Removed Or Generalized
+- Raw PDF text, screenshots, and procedural details are not published.
+- Evaluation labels, expert annotations, gold rewrites, and historical rewriting answers are not included.
+- Credentials, endpoints, hosts, ports, IP addresses, URLs, personal/account details, and concrete internal configuration values are removed.
+- Only a topic outline is retained; step-by-step operational instructions and field-level configuration details are excluded.
+
+## Public-Safe Topic Outline
+- Integration Scanning
+- Resubmit Scanning information
+- SFDC Logout
+- Fujitrax Loading Material Verify
+- Compare PTS BOM and Fujitrax
+- BOM List
+- Compare PTS BOM and Fujitrax BOM
+- List
+- Check if the material exists
+- Check if the material is depleted
+- Check if the material is expired
+- Check if the AML is expired
+- Check if the material is in AML
+- Check if the material has been held
+
+## Public-Safe Summary
+This source is represented as scanning and integration context. It is intended to help a RAG-based user-story rewriter use the correct module vocabulary and avoid unsupported assumptions. It should not be used as operational documentation.
