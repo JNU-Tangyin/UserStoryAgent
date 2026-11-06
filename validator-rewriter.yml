@@ -1,0 +1,3632 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  icon_type: emoji
+  mode: workflow
+  name: USQA
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/tongyi:0.2.3@966063fe991c50e5ac82106e65fc1949f852b2989ab2433ac028f0d25c6f92b1
+    version: null
+kind: app
+version: 0.6.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        attachment_image_file_size_limit: 2
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        file_upload_limit: 50
+        image_file_batch_limit: 10
+        image_file_size_limit: 10
+        single_chunk_attachment_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: llm
+      id: 1757833557961-source-1757833584990-target
+      source: '1757833557961'
+      sourceHandle: source
+      target: '1757833584990'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 1757833584990-source-1757833654945-target
+      source: '1757833584990'
+      sourceHandle: source
+      target: '1757833654945'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: end
+      id: 1757833654945-fail-branch-1757833705955-target
+      selected: false
+      source: '1757833654945'
+      sourceHandle: fail-branch
+      target: '1757833705955'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: if-else
+      id: 1757833654945-source-1757833723990-target
+      selected: false
+      source: '1757833654945'
+      sourceHandle: source
+      target: '1757833723990'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: end
+      id: 1757833723990-false-1757833744723-target
+      selected: false
+      source: '1757833723990'
+      sourceHandle: 'false'
+      target: '1757833744723'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1757833723990-true-1757833777730-target
+      selected: false
+      source: '1757833723990'
+      sourceHandle: 'true'
+      target: '1757833777730'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1757833723990-true-1757833797607-target
+      selected: false
+      source: '1757833723990'
+      sourceHandle: 'true'
+      target: '1757833797607'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1757833723990-true-1757833812072-target
+      selected: false
+      source: '1757833723990'
+      sourceHandle: 'true'
+      target: '1757833812072'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1757833723990-true-1757833818239-target
+      selected: false
+      source: '1757833723990'
+      sourceHandle: 'true'
+      target: '1757833818239'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1757833723990-true-1757833826343-target
+      selected: false
+      source: '1757833723990'
+      sourceHandle: 'true'
+      target: '1757833826343'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1757833723990-true-1757833830615-target
+      selected: false
+      source: '1757833723990'
+      sourceHandle: 'true'
+      target: '1757833830615'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1757833723990-true-1757833835131-target
+      selected: false
+      source: '1757833723990'
+      sourceHandle: 'true'
+      target: '1757833835131'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 1757833777730-source-1757834105439-target
+      selected: false
+      source: '1757833777730'
+      sourceHandle: source
+      target: '1757834105439'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 1757833797607-source-1757834107883-target
+      selected: false
+      source: '1757833797607'
+      sourceHandle: source
+      target: '1757834107883'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 1757833812072-source-1757834109864-target
+      selected: false
+      source: '1757833812072'
+      sourceHandle: source
+      target: '1757834109864'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 1757833818239-source-1757834111799-target
+      selected: false
+      source: '1757833818239'
+      sourceHandle: source
+      target: '1757834111799'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 1757833826343-source-1757834113175-target
+      selected: false
+      source: '1757833826343'
+      sourceHandle: source
+      target: '1757834113175'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 1757833830615-source-1757834116551-target
+      selected: false
+      source: '1757833830615'
+      sourceHandle: source
+      target: '1757834116551'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 1757833835131-source-1757834118618-target
+      selected: false
+      source: '1757833835131'
+      sourceHandle: source
+      target: '1757834118618'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: code
+      id: 1757834118618-source-1757834402979-target
+      selected: false
+      source: '1757834118618'
+      sourceHandle: source
+      target: '1757834402979'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: code
+      id: 1757834105439-source-1757834402979-target
+      selected: false
+      source: '1757834105439'
+      sourceHandle: source
+      target: '1757834402979'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: code
+      id: 1757834107883-source-1757834402979-target
+      selected: false
+      source: '1757834107883'
+      sourceHandle: source
+      target: '1757834402979'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: code
+      id: 1757834109864-source-1757834402979-target
+      selected: false
+      source: '1757834109864'
+      sourceHandle: source
+      target: '1757834402979'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: code
+      id: 1757834111799-source-1757834402979-target
+      selected: false
+      source: '1757834111799'
+      sourceHandle: source
+      target: '1757834402979'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: code
+      id: 1757834113175-source-1757834402979-target
+      selected: false
+      source: '1757834113175'
+      sourceHandle: source
+      target: '1757834402979'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: code
+      id: 1757834116551-source-1757834402979-target
+      selected: false
+      source: '1757834116551'
+      sourceHandle: source
+      target: '1757834402979'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: if-else
+      id: 1757834402979-source-1757839991514-target
+      selected: false
+      source: '1757834402979'
+      sourceHandle: source
+      target: '1757839991514'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: end
+      id: 1757840006979-source-1757840049491-target
+      source: '1757840006979'
+      sourceHandle: source
+      target: '1757840049491'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: end
+      id: 1757839991514-false-1757840097881-target
+      source: '1757839991514'
+      sourceHandle: 'false'
+      target: '1757840097881'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: knowledge-retrieval
+      id: 1757839991514-true-1757943666002-target
+      source: '1757839991514'
+      sourceHandle: 'true'
+      target: '1757943666002'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: knowledge-retrieval
+      id: 1757839991514-true-1757943671051-target
+      source: '1757839991514'
+      sourceHandle: 'true'
+      target: '1757943671051'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: code
+      id: 1757943666002-source-1757944402740-target
+      source: '1757943666002'
+      sourceHandle: source
+      target: '1757944402740'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: code
+      id: 1757943671051-source-1757944402740-target
+      source: '1757943671051'
+      sourceHandle: source
+      target: '1757944402740'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 1757944402740-source-1757840006979-target
+      source: '1757944402740'
+      sourceHandle: source
+      target: '1757840006979'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: 开始
+        type: start
+        variables:
+        - label: user_story
+          max_length: 20000
+          options: []
+          required: true
+          type: paragraph
+          variable: user_story
+      height: 108
+      id: '1757833557961'
+      position:
+        x: 423.33875633617953
+        y: -17.752584416353187
+      positionAbsolute:
+        x: 423.33875633617953
+        y: -17.752584416353187
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            response_format: JSON
+            temperature: 0
+          mode: chat
+          name: qwen-plus-2025-04-28
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 91544a6b-bbe8-4a96-88de-044adee6ac8c
+          role: system
+          text: 'You are an information extraction assistant.
+
+
+            Your task is to extract the following three parts from the given input
+            text of a user story and output them strictly in JSON format:
+
+
+            story: The story description in the form of As a xx, I want xx, So that/In
+            order to xx.
+
+            * Normalize it to a single line (remove line breaks).
+
+            * Keep the exact meaning but standardize the format as: "As a <role>,
+            I want <goal>, So that <benefit>."
+
+            * If the input has partial variations (AS A, I WANT, SO THAT, In order
+            to, with different casing or markdown formatting), normalize them into
+            the above format.
+
+            * If no valid story description exists, return an empty string.
+
+
+
+            ac: The acceptance criteria (AC).
+
+            * Usually begins with keywords like Acceptance Criteria, AC, or Given-When-Then
+            (case-insensitive).
+
+            * Extract the entire block of text related to ACs, including numbering
+            or Given-When-Then format.
+
+            * If no acceptance criteria exist, return an empty string.
+
+            * If the input is in Gherkin format (contains *Given / When / Then*):
+
+               * Normalize the format.
+
+               * Remove extra symbols (`*`, `_`, `~`, `**`, `-`, etc.).
+
+               * Standardize keywords: `Given / When / Then / And` (capitalized).
+
+               * One statement per line, keep consistent indentation.
+
+               * Add **one blank line** between ACs or scenarios.
+
+            * If the input is in non-Gherkin format (e.g., numbered list or plain
+            descriptive AC):
+
+               * Keep numbering and structure intact.
+
+               * Clean unnecessary symbols, HTML tags, links, or notes.
+
+               * Ensure readability (each AC on its own line, blank line between ACs).
+
+
+
+            bg: The background or additional descriptions.
+
+            * Everything from the input that is not part of the story or AC.
+
+            * Keep the original content and formatting.
+
+            * If none exist, return an empty string.
+
+            * Clean unnecessary symbols, HTML tags, links, or notes.
+
+            * Add `Notes: ` to the begins of the bg.
+
+
+
+            Output format (strictly JSON)
+
+            {
+
+              "story": "As a xx, I want xx, So that xx.",
+
+              "ac": "Given xx\n When xx\n Then xx \n",
+
+              "bg": "Notes: other descriptive parts"
+
+            }
+
+
+
+            Examples:
+
+
+            Example 1 Input:
+
+            ```
+
+            As A user
+
+            I want a login function
+
+            So that i can login
+
+
+            This feature is for normal user login.
+
+
+            AC1:
+
+            Given the user is on the login page
+
+            When the user input the correct username and password
+
+            Then the user can login the system
+
+
+            AC2:
+
+            Given the user is on the login page
+
+            When the user input the username and wrong password
+
+            Then the system prompt "User not found or Incorrect Password"
+
+            ```
+
+
+            Example 1 Output:
+
+            {
+
+              "story": "As a user, I want a login function, So that i can login.",
+
+              "ac": "Acceptance Criteria:\n\nAC1:\nGiven the user is on the login
+            page\nWhen the user input the correct username and password\nThen the
+            user can login the system\n\nAC2:\nGiven the user is on the login page\nWhen
+            the user input the username and wrong password\nThen the system prompt
+            \"User not found or Incorrect Password\"",
+
+              "bg": "Notes: This feature is for normal user login."
+
+            }
+
+
+            Example 2 Input:
+
+            ```
+
+            This feature is for admin users. Admin users want to easily access the
+            system.
+
+
+            *As* an admin
+
+            *I want to* login the system throught qr code
+
+            *So that* i can have an easy way to login the system
+
+
+            Acceptance Criteria:
+
+
+            AC1: QR code is valid
+
+            *Given* the admin user is on the login page
+
+            *When* the user scans the QR code
+
+            *Then* the user can login the system
+
+
+            AC2: QR code is expired
+
+            GIVEN the admin user is on the login page
+
+            WHEN the user scans the expired QR code
+
+            THEN the system prompt "QR code expired!"
+
+
+            Note: The QR code is displayed on the login page, admin user can choose
+            login throught scanning qr code on the login page.
+
+            ```
+
+
+            Example 2 Output:
+
+            {
+
+              "story": "As an admin, I want to login the sytem throught qr code, So
+            that i can have an easy way to login the system.",
+
+              "ac": "Acceptance Criteria:\n\nAC1: QR code is valid\n\nGiven the admin
+            user is on the login page\n\nWhen the user scans the QR code\n\nThen the
+            user can login the system\n\nAC2: QR code is expired\n\nGiven the admin
+            user is on the login page\n\nWhen the user scans the expired QR code\n\nThen
+            the system prompt \"QR code expired!\"",
+
+              "bg": "Notes: This feature is for admin users. Admin users want to easily
+            access the system.\n The QR code is displayed on the login page, admin
+            user can choose login throught scanning qr code on the login page."
+
+            }
+
+
+            Example 3 Input:
+
+            ```
+
+            System users want a `forget password` option on the login page.
+
+
+            *Acceptance Criteria:*
+
+            1. There is a `forget password` option on the login page.
+
+            2. The `forget password` option display below the login button.
+
+            ```
+
+
+            Example 3 Output
+
+            {
+
+              "story": "",
+
+              "ac": "Acceptance Criteria:\n1. There is a `forget password` option
+            on the login page.\n2. The `forget password` option display below the
+            login button.",
+
+              "bg": "Notes: System users want a `forget password` option on the login
+            page."
+
+            }
+
+
+            Example 4 Input:
+
+            ```
+
+            *AS A* user,
+
+            *I WANT* a detail page,
+
+            *SO* i can view my personl information.
+
+
+            *Acceptance Criterias:*
+
+            Given the user is login
+
+            When the user click the profile icon
+
+            Then the user is redirect to profile page
+
+
+            Given the user is login
+
+            When the user is redirect to profile page
+
+            Then the user can view his personal information
+
+            ```
+
+
+            Example 4 Output:
+
+            {
+
+              "story": "As a user, I want a detail page, so i can view my personal
+            information.",
+
+              "ac": "*Acceptance Criterias:*\n\nGiven the user is login\n\nWhen the
+            user click the profile icon\n\nThen the user is redirect to profile page\n\n\nGiven
+            the user is login\n\nWhen the user is redirect to profile page\n\nThen
+            the user can view his personal information",
+
+              "bg": ""
+
+            }
+
+
+            Example 5 Input:
+
+            ```
+
+            As a user,
+
+            I want an entrance to reset my password
+
+
+            * The reset password option is on the securiy menu-item, users should
+            verify their old password first. *
+
+
+            ~ If you want more info, you can view the document: https://docs.google.com/dgfhfkksdug0u2g
+
+            ```
+
+
+            Example 5 Output:
+
+            {
+
+              "story": "As a user, I want an entrance to reset my password.",
+
+              "ac": "",
+
+              "bg": "Notes: The reset password option is on the securiy menu-item,
+            users should verify their old password first."
+
+            }'
+        - id: 3cf608e8-a948-4b7d-a8fd-67c88edcc165
+          role: user
+          text: '{{#1757833557961.user_story#}}'
+        selected: false
+        title: 数据预处理
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 87
+      id: '1757833584990'
+      position:
+        x: 719.0772280665242
+        y: -17.752584416353187
+      positionAbsolute:
+        x: 719.0772280665242
+        y: -17.752584416353187
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        code: "import json\n\ndef main(json_text: str) -> dict:\n    data = json.loads(json_text)\n\
+          \    return {\n        \"story\": data.get(\"story\",\"\"),\n        \"\
+          ac\": data.get(\"ac\", \"\"),\n        \"bg\": data.get(\"bg\", \"\")\n\
+          \    }\n"
+        code_language: python3
+        desc: ''
+        error_strategy: fail-branch
+        outputs:
+          ac:
+            children: null
+            type: string
+          bg:
+            children: null
+            type: string
+          story:
+            children: null
+            type: string
+        selected: false
+        title: 解析数据预处理结果
+        type: code
+        variables:
+        - value_selector:
+          - '1757833584990'
+          - text
+          value_type: string
+          variable: json_text
+      height: 87
+      id: '1757833654945'
+      position:
+        x: 1011.0644649578061
+        y: -17.752584416353187
+      positionAbsolute:
+        x: 1011.0644649578061
+        y: -17.752584416353187
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1757833654945'
+          - error_message
+          value_type: string
+          variable: error_message
+        selected: false
+        title: 结束
+        type: end
+      height: 87
+      id: '1757833705955'
+      position:
+        x: 1315.3255676174622
+        y: 197.1077415616009
+      positionAbsolute:
+        x: 1315.3255676174622
+        y: 197.1077415616009
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: not empty
+            id: 0cb40a95-a42f-4ae3-a4bb-3363152c715c
+            value: ''
+            varType: string
+            variable_selector:
+            - '1757833654945'
+            - story
+          id: 'true'
+          logical_operator: and
+        desc: ''
+        selected: false
+        title: 判断能否正确提取故事
+        type: if-else
+      height: 139
+      id: '1757833723990'
+      position:
+        x: 1315.3255676174622
+        y: -17.752584416353187
+      positionAbsolute:
+        x: 1315.3255676174622
+        y: -17.752584416353187
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1757833654945'
+          - error_type
+          value_type: string
+          variable: result0
+        selected: false
+        title: 无法提取故事
+        type: end
+      height: 87
+      id: '1757833744723'
+      position:
+        x: 1823.4837286214602
+        y: 436.5504807594108
+      positionAbsolute:
+        x: 1823.4837286214602
+        y: 436.5504807594108
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0
+          mode: chat
+          name: qwen-plus-2025-04-28
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 5cb7f0b9-d7e2-4167-9665-5242e215c02f
+          role: system
+          text: '## Character
+
+
+            You are an expert AI assistant specializing in Agile development and requirements
+            engineering. Your role is to **evaluate user stories against defined quality
+            criteria** with precision and consistency.
+
+
+            ## Instruction
+
+
+            You must carefully read the provided **Quality Criteria** and evaluate
+            whether the given user story violates it.
+
+            Your analysis must be based strictly on the definitions and structures
+            provided. Do not make assumptions beyond the explicit rules.
+
+
+            ## User Story Model
+
+
+            A user story is represented by the model:
+
+
+            ```
+
+            US = (<R, I, B>, {<C*, E, EO*>, ...})
+
+            ```
+
+
+            ### Story Description (\<R, I, B>)
+
+
+            * `<R>` = Role
+
+            * `<I>` = Intention
+
+            * `<B>` = Benefit
+
+
+            The description of a user story is typically expressed in the **standard
+            format**:
+
+
+            ```
+
+            As a <Role>, I want <Intention>, So that <Benefit>.
+
+            ```
+
+
+            ### Acceptance Criteria Set {\<C\*, E, EO\*>}
+
+
+            * `<C*>` = {C1, C2, … Cm} = a **set of Contexts**
+
+            * `<E>` = Event = a **single triggering event**
+
+            * `<EO*>` = {EO1, EO2, … Ek} = a **set of Expected Outcomes**
+
+
+            A user story may have one or more acceptance criteria, each expressed
+            in **Gherkin style** and represented as a structured tuple:
+
+
+            ```
+
+            Given <Context>
+
+              [And <More Context>...]
+
+            When <Event>
+
+            Then <Expected Outcome>
+
+              [And <More Expected Outcome>...]
+
+            ```
+
+
+            ## Quality Criteria
+
+
+            ### Well-formed
+
+
+            A user story must be considered **well-formed** when its description contains
+            the essential structural elements.
+
+
+            Specifically, the description must explicitly include at least:
+
+
+            * Role (R) – the actor or stakeholder who benefits from the story.
+
+            * Intention (I) – the goal or capability that the role seeks to achieve.
+
+
+            Without both elements, the story cannot be regarded as well-formed.
+
+
+            ## Examples
+
+
+            As a user, I want to assign profiles to users.
+
+            Non-violation — The story description contains Role (*user*) and Intention
+            (*assign a profile to users*).
+
+
+            As an admin, I want a language icon, So that I can switch languages.
+
+            Non-violation — The story description contains Role (*admin*) and Intention
+            (*want a language icon*).
+
+
+            As a user, I don''t want non-friend users to view my profile, so that
+            I can protect my personal privacy and feel safe sharing content.
+
+            Non-violation — The story description contains Role (*user*) and Intention
+            (*prevent non-friend users from viewing my profile*).
+
+
+            I want to login the system without manually typing username and password.
+
+            Violation — Missing Role element.
+
+
+            I can''t login the system.
+
+            Violation — Missing Role and Intention element.
+
+
+            ## Response Rules
+
+
+            1. The response **MUST** be valid JSON.
+
+            2. The response **MUST NOT** contain any extra commentary, explanation,
+            or formatting outside the JSON object.
+
+            3. If the user story violates the criterion, set `"violation": True`;
+            otherwise, set `"violation": False`.
+
+            4. The `"reason"` field must contain a **clear and concise explanation**
+            of why the criterion is or is not violated.
+
+
+            ## Response Template
+
+
+            {
+
+              "violation": true | false,
+
+              "reason": "Detailed explanation regarding the Completeness criterion."
+
+            }'
+        - id: d47ef162-0ce3-4c22-a946-037047113730
+          role: user
+          text: '{{#1757833654945.story#}}'
+        selected: false
+        title: well-formed
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 87
+      id: '1757833777730'
+      position:
+        x: 1823.4837286214602
+        y: -382.25329773156335
+      positionAbsolute:
+        x: 1823.4837286214602
+        y: -382.25329773156335
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            response_format: JSON
+            temperature: 0
+          mode: chat
+          name: qwen-plus-2025-04-28
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 79cef577-d2df-4dfd-9b27-4f028051c158
+          role: system
+          text: '## Character
+
+
+            You are an expert AI assistant specializing in Agile development and requirements
+            engineering. Your role is to **evaluate user stories against defined quality
+            criteria** with precision and consistency.
+
+
+            ## Instruction
+
+
+            You must carefully read the provided **Quality Criteria** and evaluate
+            whether the given user story violates it.
+
+            Your analysis must be based strictly on the definitions and structures
+            provided. Do not make assumptions beyond the explicit rules.
+
+
+            ## User Story Model
+
+
+            A user story is represented by the model:
+
+
+            ```
+
+            US = (<R, I, B>, {<C*, E, EO*>, ...})
+
+            ```
+
+
+            ### Story Description (\<R, I, B>)
+
+
+            * `<R>` = Role
+
+            * `<I>` = Intention
+
+            * `<B>` = Benefit
+
+
+            The description of a user story is typically expressed in the **standard
+            format**:
+
+
+            ```
+
+            As a <Role>, I want <Intention>, So that <Benefit>.
+
+            ```
+
+
+            ### Acceptance Criteria Set {\<C\*, E, EO\*>}
+
+
+            * `<C*>` = {C1, C2, … Cm} = a **set of Contexts**
+
+            * `<E>` = Event = a **single triggering event**
+
+            * `<EO*>` = {EO1, EO2, … Ek} = a **set of Expected Outcomes**
+
+
+            A user story may have one or more acceptance criteria, each expressed
+            in **Gherkin style** and represented as a structured tuple:
+
+
+            ```
+
+            Given <Context>
+
+              [And <More Context>...]
+
+            When <Event>
+
+            Then <Expected Outcome>
+
+              [And <More Expected Outcome>...]
+
+            ```
+
+
+            ## Quality Criteria
+
+
+            ### Minimal
+
+
+            A user story is **minimal** when its description contains nothing a Role,
+            Intentions and, optionally, Benefits. Any additional information such
+            as comments, descriptions of the expected behavior or testing hints are
+            to be captured as additional notes.
+
+
+            ## Examples
+
+
+            As a user with profile permission, I want to assign a profile to users,
+            So that I can control their access.
+
+            // Non-violation: The story description strictly contains Role (*user
+            with profile permission*), Intention (*assign a profile to users*), and
+            Benefit (*control their access*). No extra or supplementary details.
+
+
+            As a developer, I want an API to retrieve Site configuration, So that
+            I can get `site name` and `site id` information.
+
+            // Non-violation: Although `site name` and `site id` are mentioned, they
+            are **integral to the stated benefit** and not an additional note. The
+            description still fits Role, Intention, Benefit only.
+
+
+            As an admin, I want to filter out users that have been marked as inactive,
+            So that I can get to know the inactive users.
+
+            // Non-violation: Clean separation of Role, Intention, and Benefit. No
+            extra explanatory details outside the three core fields.
+
+
+            As a worker, I want the system to display Work Instruction (WI), So that
+            I can review the WI in case I forget it.
+
+            // Non-violation: The acronym (WI) is an acceptable shorthand, not regareded
+            as a supplementary information. The Intention and Benefit remain concise
+            and minimal.
+
+
+            As a user, I want to login the system by scanning a QR code, So that I
+            can access the system without typing my username and password.
+
+            // Non-violation: The method (by scanning a QR code) is part of the **Intention**
+            itself, not a supplementary explanation. No extra narrative beyond Role,
+            Intention, and Benefit.
+
+
+            As a user, I want to import users through uploading a file (csv, excel,
+            json).
+
+            // Violation: The file types (*csv, excel, json*) are supplementary details
+            wrapped by `()`.
+
+
+            As a user, I want to view my profile, So that I can get to know my information
+            recorded. Information should include name, email and address.
+
+            // Violation: The second sentence ("Information should include name, email
+            and address") is an additional notes for the user story.
+
+
+            ## Response Rules
+
+
+            1. The response **MUST** be valid JSON.
+
+            2. The response **MUST NOT** contain any extra commentary, explanation,
+            or formatting outside the JSON object.
+
+            3. If the user story violates the criterion, set `"violation": True`;
+            otherwise, set `"violation": False`.
+
+            4. The `"reason"` field must contain a **clear and concise explanation**
+            of why the criterion is or is not violated.
+
+
+            ## Response Template
+
+
+            {
+
+              "violation": true | false,
+
+              "reason": "Detailed explanation regarding the Completeness criterion."
+
+            }'
+        - id: d60b934c-b33c-492f-b87d-47ced6241881
+          role: user
+          text: '{{#1757833654945.story#}}'
+        selected: false
+        title: Minimal
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 87
+      id: '1757833797607'
+      position:
+        x: 1823.4837286214602
+        y: -265.1510808738418
+      positionAbsolute:
+        x: 1823.4837286214602
+        y: -265.1510808738418
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            response_format: JSON
+            temperature: 0
+          mode: chat
+          name: qwen-plus-2025-04-28
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: da94d1cc-5522-4981-b3b2-469fac093a9f
+          role: system
+          text: '## Character
+
+
+            You are an expert AI assistant specializing in Agile development and requirements
+            engineering. Your role is to **evaluate user stories against defined quality
+            criteria** with precision and consistency.
+
+
+            ## Instruction
+
+
+            You must carefully read the provided **Quality Criteria** and evaluate
+            whether the given user story violates it.
+
+            Your analysis must be based strictly on the definitions and structures
+            provided. Do not make assumptions beyond the explicit rules.
+
+
+            ## User Story Model
+
+
+            A user story is represented by the model:
+
+
+            ```
+
+            US = (<R, I, B>, {<C*, E, EO*>, ...})
+
+            ```
+
+
+            ### Story Description (\<R, I, B>)
+
+
+            * `<R>` = Role
+
+            * `<I>` = Intention
+
+            * `<B>` = Benefit
+
+
+            The description of a user story is typically expressed in the **standard
+            format**:
+
+
+            ```
+
+            As a <Role>, I want <Intention>, So that <Benefit>.
+
+            ```
+
+
+            ### Acceptance Criteria Set {\<C\*, E, EO\*>}
+
+
+            * `<C*>` = {C1, C2, … Cm} = a **set of Contexts**
+
+            * `<E>` = Event = a **single triggering event**
+
+            * `<EO*>` = {EO1, EO2, … Ek} = a **set of Expected Outcomes**
+
+
+            A user story may have one or more acceptance criteria, each expressed
+            in **Gherkin style** and represented as a structured tuple:
+
+
+            ```
+
+            Given <Context>
+
+              [And <More Context>...]
+
+            When <Event>
+
+            Then <Expected Outcome>
+
+              [And <More Expected Outcome>...]
+
+            ```
+
+
+            ## Quality Criteria
+
+
+            ### Atomic
+
+
+            A user story is **atomic** when its Intention description expresses the
+            need for **exactly one feature**. It must not combine multiple independent
+            requirements or features within a single story.
+
+
+            ## Examples
+
+
+            As a user, I want to login the system easily, without the need to manually
+            type my username and password.
+
+            Non-violation — The Intention expresses **a single feature**: login without
+            typing credentials. The phrase "without the need to manually type my username
+            and password" is a clarification of *how* the login should be easy, not
+            an additional independent feature.
+
+
+            As an admin, I want to view API usage report, So that I can get to know
+            each API usage and analyze the data.
+
+            Non-violation — The Intention is **one feature**: viewing the API usage
+            report. The Benefit mentions two purposes (*get to know each API usage*
+            and *analyze the data*), but this is acceptable because multiple benefits
+            do not break atomicity; the Intention remains singular.
+
+
+            As an admin, I want to import and export profiles, So that I can manage
+            profiles more easily.
+
+            Violation — The Intention combines **two independent features**: *import
+            profiles* and *export profiles*. Each of these is a separate functional
+            need, so the story is not atomic.
+
+
+            As a user, I want to have a reset icon at page or widget level, so that
+            I can reset the UI display.
+
+            Violation — The Intention introduces **two distinct scopes** for the reset
+            feature: *page level* and *widget level*. Since these are separate requirements,
+            the story is not atomic.
+
+
+            ## Response Rules
+
+
+            1. The response **MUST** be valid JSON.
+
+            2. The response **MUST NOT** contain any extra commentary, explanation,
+            or formatting outside the JSON object.
+
+            3. If the user story violates the criterion, set `"violation": True`;
+            otherwise, set `"violation": False`.
+
+            4. The `"reason"` field must contain a **clear and concise explanation**
+            of why the criterion is or is not violated.
+
+
+            ## Response Template
+
+
+            {
+
+              "violation": true | false,
+
+              "reason": "Detailed explanation regarding the Completeness criterion."
+
+            }'
+        - id: 364ba309-2dd5-4a7e-b323-56af283e752e
+          role: user
+          text: '{{#1757833654945.story#}}'
+        selected: false
+        title: Atomic
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 87
+      id: '1757833812072'
+      position:
+        x: 1823.4837286214602
+        y: -156.95143219046463
+      positionAbsolute:
+        x: 1823.4837286214602
+        y: -156.95143219046463
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            response_format: JSON
+            temperature: 0
+          mode: chat
+          name: qwen-plus-2025-04-28
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: e08feae4-9836-4f36-be37-c2db26425c2a
+          role: system
+          text: '## Character
+
+
+            You are an expert AI assistant specializing in Agile development and requirements
+            engineering. Your role is to **evaluate user stories against defined quality
+            criteria** with precision and consistency.
+
+
+            ## Instruction
+
+
+            You must carefully read the provided **Quality Criteria** and evaluate
+            whether the given user story violates it.
+
+            Your analysis must be based strictly on the definitions and structures
+            provided. Do not make assumptions beyond the explicit rules.
+
+
+            ## User Story Model
+
+
+            A user story is represented by the model:
+
+
+            ```
+
+            US = (<R, I, B>, {<C*, E, EO*>, ...})
+
+            ```
+
+
+            ### Story Description (\<R, I, B>)
+
+
+            * `<R>` = Role
+
+            * `<I>` = Intention
+
+            * `<B>` = Benefit
+
+
+            The description of a user story is typically expressed in the **standard
+            format**:
+
+
+            ```
+
+            As a <Role>, I want <Intention>, So that <Benefit>.
+
+            ```
+
+
+            ### Acceptance Criteria Set {\<C\*, E, EO\*>}
+
+
+            * `<C*>` = {C1, C2, … Cm} = a **set of Contexts**
+
+            * `<E>` = Event = a **single triggering event**
+
+            * `<EO*>` = {EO1, EO2, … Ek} = a **set of Expected Outcomes**
+
+
+            A user story may have one or more acceptance criteria, each expressed
+            in **Gherkin style** and represented as a structured tuple:
+
+
+            ```
+
+            Given <Context>
+
+              [And <More Context>...]
+
+            When <Event>
+
+            Then <Expected Outcome>
+
+              [And <More Expected Outcome>...]
+
+            ```
+
+
+            ## Quality Criteria
+
+
+            ### Unambiguous
+
+
+            A user story must be considered **unambiguous** when both its **description**
+            and **acceptance criteria (AC)** avoid vague or imprecise terms that can
+            lead to multiple interpretations.
+
+
+            ## Examples
+
+
+            Story:
+
+            As a quality inspector, I want to mark failed tests, so that I can queue
+            them for immediate review.
+
+
+            Acceptance Criteria:
+
+            ```
+
+            Given the test run is completed  
+
+            When the inspector clicks "Mark Failed" on a test result  
+
+            Then the test is added to the Review queue with a timestamp and inspector
+            name
+
+            ```
+
+
+            Non-violation: All terms are specific and testable. The action and expected
+            result are concrete (queue with timestamp), so there is no vague wording.
+
+
+            ---
+
+
+            Story:
+
+            As a report author, I want the form to prevent submission when date fields
+            are empty, so that reports always include required date values.
+
+
+            Acceptance Criteria:
+
+            ```
+
+            Given the report form is open  
+
+            When the user submits the form with any required date field blank  
+
+            Then the form blocks submission and displays a validation message listing
+            missing date fields
+
+            ```
+
+
+            Non-violation: The story and AC avoid subjective phrases. "Prevent submission"
+            and "list missing date fields" are precise and unambiguous.
+
+
+            ---
+
+
+            Story:
+
+            As an administrator, I want column widths to be adjustable in the audit
+            log view, so that long messages are fully visible.
+
+
+            Acceptance Criteria:
+
+            ```
+
+            Given the audit log page is displayed  
+
+            When the admin drags a column edge to resize it  
+
+            Then log messages in that column show full text up to 512 characters without
+            truncation
+
+            ```
+
+
+            Non-violation: AC specifies a measurable outcome (up to 512 characters),
+            removing ambiguity about "fully visible".
+
+
+            ---
+
+
+            Story:
+
+            As a support agent, I want a searchable dropdown for error codes, so that
+            I can locate the correct code by typing part of its name.
+
+
+            Acceptance Criteria:
+
+            ```
+
+            Given the error-code dropdown is open  
+
+            When the agent types a query of three or more characters  
+
+            Then the list filters to codes whose name or description contains the
+            query
+
+            ```
+
+
+            Non-violation: The intent and AC define precise behavior (three or more
+            characters, matching name/description), so "searchable" is clarified and
+            not vague.
+
+
+            ---
+
+
+            Story:
+
+            As a field technician, I want to see current and historical device status,
+            so that I can decide follow-up actions.
+
+
+            Acceptance Criteria:
+
+            ```
+
+            Given device telemetry is available  
+
+            When the technician views the device page  
+
+            Then the UI shows the latest status and a timestamped history of the last
+            7 days
+
+            ```
+
+
+            Non-violation: "Current and historical" is given a clear, measurable meaning
+            (last 7 days), so ambiguity is eliminated.
+
+
+            ---
+
+
+            Story:
+
+            As an operator, I want the page header hidden so the interface stays "optimized",
+            maximizing usable space for tasks.
+
+
+            Acceptance Criteria:
+
+            ```
+
+            Given the operator is on the dashboard  
+
+            When the header is toggled off  
+
+            Then the interface appears optimized without layout problems
+
+            ```
+
+
+            Violation: Terms like "optimized" and "appears optimized" are subjective
+            and untestable — the AC does not define what "optimized" or "layout problems"
+            means.
+
+
+            ---
+
+
+            Story:
+
+            As a product owner, I want to add some kind of notice to AI-generated
+            content, so that viewers treat results with care.
+
+
+            Acceptance Criteria:
+
+            ```
+
+            Given AI content is displayed  
+
+            When content is produced  
+
+            Then show a notice of some kind
+
+            ```
+
+
+            Violation: Phrases "some kind of notice" and "treat results with care"
+            are vague. The AC does not specify the notice type, location, or exact
+            message, so it is ambiguous.
+
+
+            ---
+
+
+            Story:
+
+            As a site engineer, I want the system to handle high traffic and respond
+            quickly, so that performance stays acceptable.
+
+
+            Acceptance Criteria:
+
+            ```
+
+            Given heavy load conditions  
+
+            When users interact with the dashboard  
+
+            Then the system responds quickly and remains usable under high volume
+
+            ```
+
+
+            Violation: "Respond quickly",  "acceptable" and "high volume" are undefined
+            and unmeasurable — the AC lacks specific thresholds or metrics.
+
+
+            ---
+
+
+            Story:
+
+            As an admin, I want the bulk option to accept any value for the display
+            setting, so that reports reflect that option.
+
+
+            Acceptance Criteria:
+
+            ```
+
+            Given the bulk control is used  
+
+            When any value is entered in the display option  
+
+            Then the report uses that bulk value
+
+            ```
+
+
+            Violation: The phrase "any value" is ambiguous (type, range, format unknown).
+            The AC must specify allowed types or constraints to be unambiguous.
+
+
+            ---
+
+
+            Story:
+
+            As an integrator, I want to trigger local tasks or respond to external
+            events, so that the workflow can run automatically.
+
+
+            Acceptance Criteria:
+
+            ```
+
+            Given a trigger is available  
+
+            When the trigger occurs  
+
+            Then local tasks run or the system reacts appropriately
+
+            ```
+
+
+            Violation: The intention is ambiguous: does the story require user-triggered
+            local tasks, reactions to external events, or both? The AC''s  "or" and
+            "react appropriately" are unclear and lead to multiple interpretations.
+
+
+            ## Response Rules
+
+
+            1. The response **MUST** be valid JSON.
+
+            2. The response **MUST NOT** contain any extra commentary, explanation,
+            or formatting outside the JSON object.
+
+            3. If the user story violates the criterion, set `"violation": True`;
+            otherwise, set `"violation": False`.
+
+            4. The `"reason"` field must contain a **clear and concise explanation**
+            of why the criterion is or is not violated.
+
+
+            ## Response Template
+
+
+            {
+
+              "violation": true | false,
+
+              "reason": "Detailed explanation regarding the Completeness criterion."
+
+            }'
+        - id: 67d14bf6-e93b-416c-908c-f13e06067012
+          role: user
+          text: '{{#1757833654945.story#}}
+
+
+            {{#1757833654945.ac#}}'
+        selected: false
+        title: unambiguous
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 87
+      id: '1757833818239'
+      position:
+        x: 1823.4837286214602
+        y: -44.79325977476868
+      positionAbsolute:
+        x: 1823.4837286214602
+        y: -44.79325977476868
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            response_format: JSON
+            temperature: 0
+          mode: chat
+          name: qwen-plus-2025-04-28
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 36fcfb25-09f3-4c19-a345-9c6a4ac32815
+          role: system
+          text: '## Character
+
+
+            You are an expert AI assistant specializing in Agile development and requirements
+            engineering. Your role is to **evaluate user stories against defined quality
+            criteria** with precision and consistency.
+
+
+            ## Instruction
+
+
+            You must carefully read the provided **Quality Criteria** and evaluate
+            whether the given user story violates it.
+
+            Your analysis must be based strictly on the definitions and structures
+            provided. Do not make assumptions beyond the explicit rules.
+
+
+            ## User Story Model
+
+
+            A user story is represented by the model:
+
+
+            ```
+
+            US = (<R, I, B>, {<C*, E, EO*>, ...})
+
+            ```
+
+
+            ### Story Description (\<R, I, B>)
+
+
+            * `<R>` = Role
+
+            * `<I>` = Intention
+
+            * `<B>` = Benefit
+
+
+            The description of a user story is typically expressed in the **standard
+            format**:
+
+
+            ```
+
+            As a <Role>, I want <Intention>, So that <Benefit>.
+
+            ```
+
+
+            ### Acceptance Criteria Set {\<C\*, E, EO\*>}
+
+
+            * `<C*>` = {C1, C2, … Cm} = a **set of Contexts**
+
+            * `<E>` = Event = a **single triggering event**
+
+            * `<EO*>` = {EO1, EO2, … Ek} = a **set of Expected Outcomes**
+
+
+            A user story may have one or more acceptance criteria, each expressed
+            in **Gherkin style** and represented as a structured tuple:
+
+
+            ```
+
+            Given <Context>
+
+              [And <More Context>...]
+
+            When <Event>
+
+            Then <Expected Outcome>
+
+              [And <More Expected Outcome>...]
+
+            ```
+
+
+            ## Quality Criteria
+
+
+            ### Conceptually Sound
+
+
+            A user story is **conceptually sound** when each of its key fields (when
+            present) expresses the *intended concept*:
+
+
+            * `<R>` = **Role** → an actor or stakeholder (who).
+
+            * `<I>` = **Intention** → a goal or action the role wants (what).
+
+            * `<B>` = **Benefit** → the value or advantage gained (why).
+
+            * `<C>` = **Context** → a condition or pre-state (Given).
+
+            * `<E>` = **Event** → a triggering action (When).
+
+            * `<EO>` = **Expected Outcome** → an observable result or system response
+            (Then).
+
+
+            Important scope:
+
+            * Only check whether each field *expresses* its concept. Do **not** judge:
+            completeness, quality, technical detail, feasibility, or who performs
+            implementation.
+
+            * A field is **conceptually sound** if it clearly maps to its corresponding
+            concept above.
+
+            * A whole story is **conceptually sound** only if **all** its fields (that
+            appear) are conceptually sound.
+
+
+            * For each field that exists, ask:"Does this phrase answer the corresponding
+            conceptual question (who / what / why / given / when / then)?"
+
+              * If yes → the field is conceptually sound.
+
+              * If any field is not → the story is **not** conceptually sound.
+
+
+
+            ## Examples
+
+
+            Story:
+
+            As a project manager, I want to generate weekly progress reports, so that
+            I can share updates with stakeholders.
+
+            → Non-violation
+
+
+            * `<R>` = *project manager* → Role
+
+            * `<I>` = *generate weekly progress reports* → Intention
+
+            * `<B>` = *share updates with stakeholders* → Benefit
+
+
+            ---
+
+
+            Story:
+
+            As a monitoring service, I want to store API logs, so that the database
+            grows with each request.
+
+            → Violation
+
+
+            * `<R>` = *monitoring service* → not a human/stakeholder role
+
+            * `<I>` = *store API logs* → implementation/system action rather than
+            a user goal
+
+            * `<B>` = *database grows* → describes system behavior, not a user benefit
+
+
+            ---
+
+
+            Acceptance Criteria:
+
+            ```
+
+            Given the user is logged in
+
+            When the user clicks "Download Report"
+
+            Then the system generates a PDF with today''s data
+
+            ```
+
+            → Non-violation
+
+
+            * `<C>` = *user is logged in* → Context
+
+            * `<E>` = *user clicks "Download Report"* → Event
+
+            * `<EO>` = *system generates a PDF with today''s data* → Expected Outcome
+
+
+            ---
+
+
+            Acceptance Criteria:
+
+            ```
+
+            Given the checklist has failures
+
+            When the checklist is in failed state
+
+            Then the system ensures quality
+
+            ```
+
+            → Violation
+
+
+            * `<C>` = *checklist has failures* → Context
+
+            * `<E>` = *checklist is in failed state* → this is a state, not a triggering
+            Event
+
+            * `<EO>` = *system ensures quality* → vague system intent, not an observable
+            outcome
+
+
+            ## Response Rules
+
+
+            1. The response **MUST** be valid JSON.
+
+            2. The response **MUST NOT** contain any extra commentary, explanation,
+            or formatting outside the JSON object.
+
+            3. If the user story violates the criterion, set `"violation": True`;
+            otherwise, set `"violation": False`.
+
+            4. The `"reason"` field must contain a **clear and concise explanation**
+            of why the criterion is or is not violated.
+
+
+            ## Response Template
+
+
+            {
+
+              "violation": true | false,
+
+              "reason": "Detailed explanation regarding the Completeness criterion."
+
+            }'
+        - id: 1ae7f029-da4a-40d7-9051-42332ab59556
+          role: user
+          text: '{{#1757833654945.story#}}
+
+
+            {{#1757833654945.ac#}}'
+        selected: true
+        title: conceptually-sound
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 87
+      id: '1757833826343'
+      position:
+        x: 1823.4837286214602
+        y: 68.68442055170004
+      positionAbsolute:
+        x: 1823.4837286214602
+        y: 68.68442055170004
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            response_format: JSON
+            temperature: 0
+          mode: chat
+          name: qwen-plus-2025-04-28
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: a8f8d67a-139a-4cdb-9930-c18ed657c62a
+          role: system
+          text: '## Character
+
+
+            You are an expert AI assistant specializing in Agile development and requirements
+            engineering. Your role is to **evaluate user stories against defined quality
+            criteria** with precision and consistency.
+
+
+            ## Instruction
+
+
+            You must carefully read the provided **Quality Criteria** and evaluate
+            whether the given user story violates it.
+
+            Your analysis must be based strictly on the definitions and structures
+            provided. Do not make assumptions beyond the explicit rules.
+
+
+            ## User Story Model
+
+
+            A user story is represented by the model:
+
+
+            ```
+
+            US = (<R, I, B>, {<C*, E, EO*>, ...})
+
+            ```
+
+
+            ### Story Description (\<R, I, B>)
+
+
+            * `<R>` = Role
+
+            * `<I>` = Intention
+
+            * `<B>` = Benefit
+
+
+            The description of a user story is typically expressed in the **standard
+            format**:
+
+
+            ```
+
+            As a <Role>, I want <Intention>, So that <Benefit>.
+
+            ```
+
+
+            ### Acceptance Criteria Set {\<C\*, E, EO\*>}
+
+
+            * `<C*>` = {C1, C2, … Cm} = a **set of Contexts**
+
+            * `<E>` = Event = a **single triggering event**
+
+            * `<EO*>` = {EO1, EO2, … Ek} = a **set of Expected Outcomes**
+
+
+            A user story may have one or more acceptance criteria, each expressed
+            in **Gherkin style** and represented as a structured tuple:
+
+
+            ```
+
+            Given <Context>
+
+              [And <More Context>...]
+
+            When <Event>
+
+            Then <Expected Outcome>
+
+              [And <More Expected Outcome>...]
+
+            ```
+
+
+            ## Quality Criteria
+
+
+            ### Problem-oriented
+
+
+            A user story is **problem-oriented** when its **description** states a
+            **need or problem to be solved** rather than prescribing the implementation
+            details.
+
+
+            ## Examples
+
+
+            As a project manager, I want to track overdue tasks separately, so that
+            I can focus on risks in the schedule.
+
+            → Non-violation: States a need, no mention of how the UI or database does
+            it.
+
+
+            As a customer, I want to pause my subscription temporarily, so that I
+            don’t lose data when I’m away.
+
+            → Non-violation: Expresses capability, not mechanism.
+
+
+            As a teacher, I want to see all assignments pending review, so that I
+            can plan my grading workload.
+
+            → Non-violation: Problem-focused, avoids prescribing dashboards, filters,
+            etc.
+
+
+            As a warehouse worker, I want to know which items are running low in stock,
+            so that I can request replenishment in time.
+
+            → Non-violation: States the problem (stock visibility), not how alerts
+            should appear.
+
+
+            As a mobile user, I want to recover access if I forget my password, so
+            that I don’t get locked out of my account.
+
+            → Non-violation: Capability expressed; no details about reset links, OTP,
+            or UI.
+
+
+            As a project manager, I want a red `Overdue` badge in the task table header,
+            so that I can quickly notice overdue tasks.
+
+            → Violation: Prescribes specific UI design.
+
+
+            As a customer, I want a **pause button on the billing page that disables
+            auto-renewal for 30 days**, so that I can stop my subscription temporarily.
+
+            → Violation: Hard-coded implementation details.
+
+
+            As a teacher, I want a **filter dropdown on the Assignments page showing
+            `Pending Review`**, so that I can find assignments faster.
+
+            → Violation: Specific UI control.
+
+
+            As a warehouse worker, I want the system to **send me a push notification
+            and an email alert whenever stock < 10 items**, so that I can request
+            replenishment.
+
+            → Violation: Specific thresholds and notification channels.
+
+
+            As a mobile user, I want a **`Forgot Password?` link that sends me a 6-digit
+            SMS code**, so that I can reset my credentials.
+
+            → Violation: Prescribes reset flow and channel.
+
+
+            ## Response Rules
+
+
+            1. The response **MUST** be valid JSON.
+
+            2. The response **MUST NOT** contain any extra commentary, explanation,
+            or formatting outside the JSON object.
+
+            3. If the user story violates the criterion, set `"violation": True`;
+            otherwise, set `"violation": False`.
+
+            4. The `"reason"` field must contain a **clear and concise explanation**
+            of why the criterion is or is not violated.
+
+
+            ## Response Template
+
+
+            {
+
+              "violation": true | false,
+
+              "reason": "Detailed explanation regarding the Completeness criterion."
+
+            }'
+        - id: a97e48e2-244b-408e-8d2c-dd9b5a996f10
+          role: user
+          text: '{{#1757833654945.story#}}'
+        selected: false
+        title: problem-oriented
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 87
+      id: '1757833830615'
+      position:
+        x: 1823.4837286214602
+        y: 176.8840692350773
+      positionAbsolute:
+        x: 1823.4837286214602
+        y: 176.8840692350773
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            response_format: JSON
+            temperature: 0
+          mode: chat
+          name: qwen-plus-2025-04-28
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: b2e6d218-a9fe-44f1-8355-959648bcba46
+          role: system
+          text: '## Character
+
+
+            You are an expert AI assistant specializing in Agile development and requirements
+            engineering. Your role is to **evaluate user stories against defined quality
+            criteria** with precision and consistency.
+
+
+            ## Instruction
+
+
+            You must carefully read the provided **Quality Criteria** and evaluate
+            whether the given user story violates it.
+
+            Your analysis must be based strictly on the definitions and structures
+            provided. Do not make assumptions beyond the explicit rules.
+
+
+            ## User Story Model
+
+
+            A user story is represented by the model:
+
+
+            ```
+
+            US = (<R, I, B>, {<C*, E, EO*>, ...})
+
+            ```
+
+
+            ### Story Description (\<R, I, B>)
+
+
+            * `<R>` = Role
+
+            * `<I>` = Intention
+
+            * `<B>` = Benefit
+
+
+            The description of a user story is typically expressed in the **standard
+            format**:
+
+
+            ```
+
+            As a <Role>, I want <Intention>, So that <Benefit>.
+
+            ```
+
+
+            ### Acceptance Criteria Set {\<C\*, E, EO\*>}
+
+
+            * `<C*>` = {C1, C2, … Cm} = a **set of Contexts**
+
+            * `<E>` = Event = a **single triggering event**
+
+            * `<EO*>` = {EO1, EO2, … Ek} = a **set of Expected Outcomes**
+
+
+            A user story may have one or more acceptance criteria, each expressed
+            in **Gherkin style** and represented as a structured tuple:
+
+
+            ```
+
+            Given <Context>
+
+              [And <More Context>...]
+
+            When <Event>
+
+            Then <Expected Outcome>
+
+              [And <More Expected Outcome>...]
+
+            ```
+
+
+            ## Quality Criteria
+
+
+            ### Internal Consistency
+
+
+            A user story is **internal-consistency** when its **description** is logically
+            aligned and free of contradictions.
+
+
+            ## Examples
+
+
+            As a customer, I want to save items to a wishlist, so that I can purchase
+            them later.
+
+            // Non-violation: Role (customer), Intention (save items), and Benefit
+            (purchase later) are aligned and refer to the same actor.
+
+
+            As an administrator, I want to assign user roles, so that employees receive
+            appropriate access rights.
+
+            // Non-violation: Administrator performs the action and receives the corresponding
+            benefit; no actor mismatch.
+
+
+            As a nurse, I want to view a patient’s medication history, so that I can
+            administer the correct dose.
+
+            // Non-violation: Nurse is the actor, the intention is clear, and the
+            benefit pertains to the nurse’s work—logically consistent.
+
+
+            As a warehouse clerk, I want to mark orders as packed, so that shipping
+            can proceed on schedule.
+
+            // Non-violation: The clerk’s action produces the stated benefit; actor,
+            action, and benefit are coherent.
+
+
+            As a data analyst, I want access to raw export files, so that I can validate
+            reported metrics.
+
+            // Non-violation: The role requests a capability and the benefit explains
+            how that role gains value—consistent.
+
+
+            As a customer, I want to enable database replication, so that the cluster
+            maintains high availability.
+
+            // Violation: A customer cannot *enable* a database-level capability;
+            the Intention assigns an action that logically belongs to system administrators,
+            causing role–action mismatch.
+
+
+            As a support agent, I want to run nightly maintenance scripts, so that
+            the system archive is compacted.
+
+            // Violation: The Intention implies the agent performs technical system
+            tasks (running scripts), while the Benefit is described as a system behavior—responsibilities
+            and subjects are misaligned.
+
+
+            As a tester, I want to support the new validation framework, so that tests
+            pass across environments.
+
+            // Violation: The verb "support" targets a feature or system capability;
+            a human role cannot logically *support* a framework in the same conceptual
+            sense, so the Intention is phrased incorrectly.
+
+
+            As a clerk, I want to approve vendor invoices, so that we can reduce accounting
+            workload.
+
+            // Violation: The Benefit uses "we" (an ambiguous collective) while the
+            Role is an individual clerk; the stated benefit’s subject and the Role
+            are misaligned and may imply responsibilities beyond the clerk’s scope.
+
+
+            As a user, I want to disable notifications, so that I still receive critical
+            alerts.
+
+            // Violation:  The Intention (disable notifications) directly contradicts
+            the Benefit (still receive alerts), producing an internal contradiction
+            between action and expected outcome.
+
+
+            ## Response Rules
+
+
+            1. The response **MUST** be valid JSON.
+
+            2. The response **MUST NOT** contain any extra commentary, explanation,
+            or formatting outside the JSON object.
+
+            3. If the user story violates the criterion, set `"violation": True`;
+            otherwise, set `"violation": False`.
+
+            4. The `"reason"` field must contain a **clear and concise explanation**
+            of why the criterion is or is not violated.
+
+
+            ## Response Template
+
+
+            {
+
+              "violation": true | false,
+
+              "reason": "Detailed explanation regarding the Completeness criterion."
+
+            }'
+        - id: f7262a6c-6448-4bf0-93a8-aa41af269e9d
+          role: user
+          text: '{{#1757833654945.story#}}'
+        selected: false
+        title: internal-consistency
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 87
+      id: '1757833835131'
+      position:
+        x: 1823.4837286214602
+        y: 295.35304929999086
+      positionAbsolute:
+        x: 1823.4837286214602
+        y: 295.35304929999086
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        code: "import json\nimport ast\n\ndef main(rs_wf: str) -> dict:\n    try:\n\
+          \        rs = json.loads(rs_wf)\n    except json.JSONDecodeError:\n    \
+          \    rs = ast.literal_eval(rs_wf)\n\n    return {\n        \"wf_v\": rs.get(\"\
+          violation\", False),\n        \"wf_vr\": rs.get(\"reason\", \"\")\n    }\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          wf_v:
+            children: null
+            type: boolean
+          wf_vr:
+            children: null
+            type: string
+        selected: false
+        title: 提取结果
+        type: code
+        variables:
+        - value_selector:
+          - '1757833777730'
+          - text
+          value_type: string
+          variable: rs_wf
+      height: 51
+      id: '1757834105439'
+      position:
+        x: 2126.48372862146
+        y: -382.25329773156335
+      positionAbsolute:
+        x: 2126.48372862146
+        y: -382.25329773156335
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        code: "import json\nimport ast\n\ndef main(rs_minimal: str) -> dict:\n   \
+          \ try:\n        rs = json.loads(rs_minimal)\n    except json.JSONDecodeError:\n\
+          \        rs = ast.literal_eval(rs_minimal)\n\n    return {\n        \"mini_v\"\
+          : rs.get(\"violation\", False),\n        \"mini_vr\": rs.get(\"reason\"\
+          , \"\")\n    }"
+        code_language: python3
+        desc: ''
+        outputs:
+          mini_v:
+            children: null
+            type: boolean
+          mini_vr:
+            children: null
+            type: string
+        selected: false
+        title: 提取结果
+        type: code
+        variables:
+        - value_selector:
+          - '1757833797607'
+          - text
+          value_type: string
+          variable: rs_minimal
+      height: 51
+      id: '1757834107883'
+      position:
+        x: 2126.48372862146
+        y: -265.1510808738418
+      positionAbsolute:
+        x: 2126.48372862146
+        y: -265.1510808738418
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        code: "import json\nimport ast\n\ndef main(rs_atomic: str) -> dict:\n    try:\n\
+          \        rs = json.loads(rs_atomic)\n    except json.JSONDecodeError:\n\
+          \        rs = ast.literal_eval(rs_atomic)\n\n    return {\n        \"atom_v\"\
+          : rs.get(\"violation\", False),\n        \"atom_vr\": rs.get(\"reason\"\
+          , \"\")\n    }\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          atom_v:
+            children: null
+            type: boolean
+          atom_vr:
+            children: null
+            type: string
+        selected: false
+        title: 提取结果
+        type: code
+        variables:
+        - value_selector:
+          - '1757833812072'
+          - text
+          value_type: string
+          variable: rs_atomic
+      height: 51
+      id: '1757834109864'
+      position:
+        x: 2126.48372862146
+        y: -156.95143219046463
+      positionAbsolute:
+        x: 2126.48372862146
+        y: -156.95143219046463
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        code: "import json\nimport ast\n\ndef main(rs_ubs: str) -> dict:\n    try:\n\
+          \        rs = json.loads(rs_ubs)\n    except json.JSONDecodeError:\n   \
+          \     rs = ast.literal_eval(rs_ubs)\n\n    return {\n        \"ubs_v\":\
+          \ rs.get(\"violation\", False),\n        \"ubs_vr\": rs.get(\"reason\",\
+          \ \"\")\n    }\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          ubs_v:
+            children: null
+            type: boolean
+          ubs_vr:
+            children: null
+            type: string
+        selected: false
+        title: 提取结果
+        type: code
+        variables:
+        - value_selector:
+          - '1757833818239'
+          - text
+          value_type: string
+          variable: rs_ubs
+      height: 51
+      id: '1757834111799'
+      position:
+        x: 2126.48372862146
+        y: -44.79325977476868
+      positionAbsolute:
+        x: 2126.48372862146
+        y: -44.79325977476868
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        code: "import json\nimport ast\n\ndef main(rs_cs: str) -> dict:\n    try:\n\
+          \        rs = json.loads(rs_cs)\n    except json.JSONDecodeError:\n    \
+          \    rs = ast.literal_eval(rs_cs)\n\n    return {\n        \"cs_v\": rs.get(\"\
+          violation\", False),\n        \"cs_vr\": rs.get(\"reason\", \"\")\n    }"
+        code_language: python3
+        desc: ''
+        outputs:
+          cs_v:
+            children: null
+            type: boolean
+          cs_vr:
+            children: null
+            type: string
+        selected: false
+        title: 提取结果
+        type: code
+        variables:
+        - value_selector:
+          - '1757833826343'
+          - text
+          value_type: string
+          variable: rs_cs
+      height: 51
+      id: '1757834113175'
+      position:
+        x: 2126.48372862146
+        y: 68.68442055170004
+      positionAbsolute:
+        x: 2126.48372862146
+        y: 68.68442055170004
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        code: "import json\nimport ast\n\ndef main(rs_po: str) -> dict:\n    try:\n\
+          \        rs = json.loads(rs_po)\n    except json.JSONDecodeError:\n    \
+          \    rs = ast.literal_eval(rs_po)\n\n    return {\n        \"po_v\": rs.get(\"\
+          violation\", False),\n        \"po_vr\": rs.get(\"reason\", \"\")\n    }"
+        code_language: python3
+        desc: ''
+        outputs:
+          po_v:
+            children: null
+            type: boolean
+          po_vr:
+            children: null
+            type: string
+        selected: false
+        title: 提取结果
+        type: code
+        variables:
+        - value_selector:
+          - '1757833830615'
+          - text
+          value_type: string
+          variable: rs_po
+      height: 51
+      id: '1757834116551'
+      position:
+        x: 2126.48372862146
+        y: 176.8840692350773
+      positionAbsolute:
+        x: 2126.48372862146
+        y: 176.8840692350773
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        code: "import json\nimport ast\n\ndef main(rs_ic: str) -> dict:\n    try:\n\
+          \        rs = json.loads(rs_ic)\n    except json.JSONDecodeError:\n    \
+          \    rs = ast.literal_eval(rs_ic)\n\n    return {\n        \"ic_v\": rs.get(\"\
+          violation\", False),\n        \"ic_vr\": rs.get(\"reason\", \"\")\n    }"
+        code_language: python3
+        desc: ''
+        outputs:
+          ic_v:
+            children: null
+            type: boolean
+          ic_vr:
+            children: null
+            type: string
+        selected: false
+        title: 提取结果
+        type: code
+        variables:
+        - value_selector:
+          - '1757833835131'
+          - text
+          value_type: string
+          variable: rs_ic
+      height: 51
+      id: '1757834118618'
+      position:
+        x: 2126.48372862146
+        y: 295.35304929999086
+      positionAbsolute:
+        x: 2126.48372862146
+        y: 295.35304929999086
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        code: "def main(wf_v, mini_v, atom_v, ubs_v, cs_v, po_v, ic_v: bool, \n  \
+          \       wf_vr, mini_vr, atom_vr, ubs_vr, cs_vr, po_vr, ic_vr: str) -> dict:\n\
+          \    reports = []\n    violations = []\n\n    if wf_v:\n        reports.append(f'Violation:\
+          \ Well-formed\\nReason: {wf_vr}')\n        violations.append('Well-formed')\n\
+          \n    if atom_v:\n        reports.append(f'Violation: Atomic\\nReason: {atom_vr}')\n\
+          \        violations.append('Atomic')\n\n    if mini_v:\n        reports.append(f'Violation:\
+          \ Minimal\\nReason: {mini_vr}')\n        violations.append('Minimal')\n\n\
+          \    if ubs_v:\n        reports.append(f'Violation: Unambiguous\\nReason:\
+          \ {ubs_vr}')\n        violations.append('Unambiguous')\n\n    if cs_v:\n\
+          \        reports.append(f'Violation: Conceptually Sound\\nReason: {cs_vr}')\n\
+          \        violations.append('Conceptually Sound')\n    \n    if po_v:\n \
+          \       reports.append(f'Violation: Problem-oriented\\nReason: {po_vr}')\n\
+          \        violations.append('Problem-oriented')\n\n    if ic_v:\n       \
+          \ reports.append(f'Violation: Internal Consistency\\nReason: {ic_vr}')\n\
+          \        violations.append('Internal Consistency')\n    \n    if not reports:\n\
+          \        return {\"reports\": \"No violation detected.\",\n        \"violations\"\
+          : violations\n        }\n\n    return {\n        \"reports\": \"\\n\\n\"\
+          .join(reports),\n        \"violations\": \" Violation;\".join(violations)\n\
+          \    }"
+        code_language: python3
+        desc: ''
+        outputs:
+          reports:
+            children: null
+            type: string
+          violations:
+            children: null
+            type: string
+        selected: false
+        title: 结果聚合
+        type: code
+        variables:
+        - value_selector:
+          - '1757834105439'
+          - wf_v
+          value_type: boolean
+          variable: wf_v
+        - value_selector:
+          - '1757834107883'
+          - mini_v
+          value_type: boolean
+          variable: mini_v
+        - value_selector:
+          - '1757834109864'
+          - atom_v
+          value_type: boolean
+          variable: atom_v
+        - value_selector:
+          - '1757834111799'
+          - ubs_v
+          value_type: boolean
+          variable: ubs_v
+        - value_selector:
+          - '1757834113175'
+          - cs_v
+          value_type: boolean
+          variable: cs_v
+        - value_selector:
+          - '1757834116551'
+          - po_v
+          value_type: boolean
+          variable: po_v
+        - value_selector:
+          - '1757834118618'
+          - ic_v
+          value_type: boolean
+          variable: ic_v
+        - value_selector:
+          - '1757834105439'
+          - wf_vr
+          value_type: string
+          variable: wf_vr
+        - value_selector:
+          - '1757834107883'
+          - mini_vr
+          value_type: string
+          variable: mini_vr
+        - value_selector:
+          - '1757834109864'
+          - atom_vr
+          value_type: string
+          variable: atom_vr
+        - value_selector:
+          - '1757834111799'
+          - ubs_vr
+          value_type: string
+          variable: ubs_vr
+        - value_selector:
+          - '1757834113175'
+          - cs_vr
+          value_type: string
+          variable: cs_vr
+        - value_selector:
+          - '1757834116551'
+          - po_vr
+          value_type: string
+          variable: po_vr
+        - value_selector:
+          - '1757834118618'
+          - ic_vr
+          value_type: string
+          variable: ic_vr
+      height: 51
+      id: '1757834402979'
+      position:
+        x: 2496.074408869129
+        y: -75.42867362719196
+      positionAbsolute:
+        x: 2496.074408869129
+        y: -75.42867362719196
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: not contains
+            id: 3e0f6013-4cd8-4bdb-ba3f-42b98e49fd2b
+            value: No violation detected
+            varType: string
+            variable_selector:
+            - '1757834402979'
+            - reports
+          id: 'true'
+          logical_operator: and
+        desc: ''
+        selected: false
+        title: 是否违反质量准则判断
+        type: if-else
+      height: 163
+      id: '1757839991514'
+      position:
+        x: 2773.356925315033
+        y: -75.42867362719196
+      positionAbsolute:
+        x: 2773.356925315033
+        y: -75.42867362719196
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1757944402740'
+          - context
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: qwen-plus-2025-04-28
+          provider: langgenius/tongyi/tongyi
+        prompt_config:
+          jinja2_variables: []
+        prompt_template:
+        - edition_type: basic
+          id: 33aa63a4-f687-4c71-b65d-1a49f5169df0
+          jinja2_text: "You are an expert Agile Business Analyst and requirements\
+            \ engineer, specializing in transforming user stories to meet the highest\
+            \ quality standards.\n\nYour task is to revise and improve a given user\
+            \ story based on a specific **Quality Feedback Report** provided by a\
+            \ previous analysis. You must meticulously apply the feedback to fix the\
+            \ identified issues while preserving the original intent of the requirement.\n\
+            \n---\n\n## User Story Model\n\nA user story is represented by the model:\n\
+            \n```\nUS = (<R, I, B>, {<C*, E, EO*>, ...})\n```\n\n### Story Description\
+            \ (\\<R, I, B>)\n\n* `<R>` = Role\n* `<I>` = Intention\n* `<B>` = Benefit\n\
+            \nThe description of a user story is typically expressed in the **standard\
+            \ format**:\n\n```\nAs a <Role>, I want <Intention>, So that <Benefit>.\n\
+            ```\n\n### Acceptance Criteria Set {\\<C\\*, E, EO\\*>}\n\n* `<C*>` =\
+            \ {C1, C2, … Cm} = a **set of Contexts**\n* `<E>` = Event = one or more\
+            \ **triggering events**\n* `<EO*>` = {EO1, EO2, … Ek} = a **set of Expected\
+            \ Outcomes**\n\nA user story may have one or more acceptance criteria,\
+            \ each expressed in **Gherkin style** and represented as a structured\
+            \ tuple:\n\n```\nGiven <Context>\n  [And <More Context>...]\nWhen <Event>\n\
+            Then <Expected Outcome>\n  [And <More Expected Outcome>...]\n```\n\n---\n\
+            \n## Quality Criterion Definition\n\n1. **Well-formed**\n   A user story\
+            \ must be considered **well-formed** when its description contains the\
+            \ essential structural elements.\n\nSpecifically, the description must\
+            \ explicitly include at least:\n* Role (R) – the actor or stakeholder\
+            \ who benefits from the story.\n* Intention (I) – the goal or capability\
+            \ that the role seeks to achieve.\n\nWithout both elements, the story\
+            \ cannot be regarded as well-formed.\n\n2. **Minimal**\n   A user story\
+            \ is **minimal** when its description contains only a Role, an Intention,\
+            \ and optionally a Benefit. Any additional information such as comments,\
+            \ descriptions of expected behavior, or testing hints are to be captured\
+            \ as additional notes.\n\n3. **Atomic**\n   A user story is **atomic**\
+            \ when its Intention description expresses the need for **exactly one\
+            \ feature**. It must not combine multiple independent requirements or\
+            \ features within a single story.\n\n4. **Unambiguous**\n   A user story\
+            \ must be considered **unambiguous** when both its **description** and\
+            \ **acceptance criteria (AC)** avoid vague or imprecise terms that can\
+            \ lead to multiple interpretations.\n\n5. **Problem-oriented**\n   A user\
+            \ story is **problem-oriented** when its **description** states a **need\
+            \ or problem to be solved** rather than prescribing the implementation\
+            \ details.\n\n6. **Conceptually Sound**\n   A user story is **conceptually\
+            \ sound** when each of its key fields (when present) expresses the *intended\
+            \ concept*:\n\n* `<R>` = **Role** → an actor or stakeholder (who).\n*\
+            \ `<I>` = **Intention** → a goal or action the role wants (what).\n* `<B>`\
+            \ = **Benefit** → the value or advantage gained (why).\n* `<C>` = **Context**\
+            \ → a condition or pre-state (Given).\n* `<E>` = **Event** → a triggering\
+            \ action (When).\n* `<EO>` = **Expected Outcome** → an observable result\
+            \ or system response (Then).\n\n7. **Internal Consistency**\n   A user\
+            \ story is **internally consistent** when its **description** is logically\
+            \ aligned and free of contradictions.\n\n---\n\n## Instructions\n\n1.\
+            \ **Analyze the Feedback:** Carefully examine the **Quality Feedback Report**.\
+            \ Your primary goal is to address the specific **Reason for Violation**\
+            \ by rewriting the user story.\n2. **Review from Wiki (optional):** If\
+            \ the **Information from Wiki** is provided, you may use it to better\
+            \ understand the related business domain or module before rewriting. \n\
+            3. **Preserve Core Intent:** You must NOT invent new requirements or delete\
+            \ existing ones. Your job is to restructure and refine how the requirements\
+            \ are expressed to meet the quality standards. The core functionality\
+            \ described in the original story must be fully preserved.\n4. **Handle\
+            \ Story Splitting:** If the **Rewrite Reference Examples** suggests splitting\
+            \ the story (due to violations like **Atomic**), you MUST generate multiple,\
+            \ complete, and independent user stories.\n\n   * Each new story must\
+            \ have its own \"As a / I want / So that\" statement.\n   * Distribute\
+            \ the original detailed description and Acceptance Criteria to the most\
+            \ relevant new story.\n   * Each new story must be **self-contained**,\
+            \ meaning it can be understood, developed, and tested independently.\n\
+            5. **Ensure Consistency:** After revision, ensure that the main story\
+            \ statement, any descriptive notes, and the Acceptance Criteria are all\
+            \ perfectly aligned within each new story.\n6. **Strict Output Format\
+            \ and Behavior:** You must strictly follow the output format detailed\
+            \ below. Do NOT include any explanations, introductions, summaries, or\
+            \ commentary.\n\n   * If multiple stories are produced, each must begin\
+            \ with `--- REVISED USER STORY X ---` on its own line.\n   * Do not merge\
+            \ multiple stories into one section.\n   * Your response MUST consist\
+            \ ONLY of the revised user story/stories in the format below.\n\n---\n\
+            \n## Information From Wiki:\n\n{{wiki}}\n\n---\n\n## Rewrite Reference\
+            \ Examples:\n\n{{rewrite_ref_examples}}\n\n---\n\n## Required Output Format\n\
+            \nIf you are splitting the story, use a numbered format for each new story.\n\
+            \n**--- REVISED USER STORY 1 ---**\n\n**As a** [Revised Role]\n**I want**\
+            \ [Revised, focused Intention]\n**So that** [Revised Benefit]\n\n**Notes:**\n\
+            [Optional: Include ONLY relevant parts of the original description that\
+            \ are necessary for clarity in THIS specific story. Do not introduce new\
+            \ requirements or assumptions.]\n\n**Acceptance Criteria (Gherkin style):**\n\
+            [List ONLY the Acceptance Criteria relevant to THIS specific story. You\
+            \ may need to rephrase or extract them from the original.]\n\n**--- REVISED\
+            \ USER STORY 2 ---**\n... (if applicable)\n\n---\n\n## Final Output Reference\
+            \ Example\n\n```\nAs a delivery person\nI want to connect my Mobile Device\
+            \ with a mobile printer\nSo that I can print documents or labels directly\
+            \ from my device\n\n---\nNotes:\nThe Mobile Device can be connected to\
+            \ any mobile printer. After successful login, all existing printer connections\
+            \ are removed. A connection is automatically established by the operating\
+            \ system by holding the Mobile Device to a mobile printer (approx. 2 cm\
+            \ maximum distance). If no or more than one printer is connected for an\
+            \ upcoming print, the actor is prompted to hold the Mobile Device to a\
+            \ printer. Using the tile in the print menu, the actor can manually remove\
+            \ all connections.\n\nAcceptance Criteria:\nGiven I am logged into the\
+            \ Mobile Device\nWhen I hold the Mobile Device close to a switched-on\
+            \ mobile printer (within 2 cm maximum distance)\nThen the connection should\
+            \ be automatically established by the operating system\nAnd the toast\
+            \ message “Mobile printer successfully connected” should be displayed\n\
+            And I should hear an acoustic tone indicating successful connection\n\n\
+            Given I have multiple printers connected\nWhen I manually remove all connections\
+            \ using the tile in the print menu\nThen all existing printer connections\
+            \ should be removed\n\nGiven another delivery person logs in on the same\
+            \ Mobile Device\nWhen they log in successfully\nThen the current printer\
+            \ connection should be terminated\n```"
+          role: system
+          text: "You are an expert Agile Business Analyst and requirements engineer,\
+            \ specializing in transforming user stories to meet the highest quality\
+            \ standards.\n\n\nYour task is to revise and improve a given user story\
+            \ based on a specific **Quality Feedback Report** provided by a previous\
+            \ analysis. You must meticulously apply the feedback to fix the identified\
+            \ issues while preserving the original intent of the requirement.\n\n\n\
+            ---\n\n\n## User Story Model\n\n\nA user story is represented by the model:\n\
+            \n\n```\nUS = (<R, I, B>, {<C*, E, EO*>, ...})\n```\n\n\n### Story Description\
+            \ (\\<R, I, B>)\n\n\n* `<R>` = Role\n* `<I>` = Intention\n* `<B>` = Benefit\n\
+            \n\nThe description of a user story is typically expressed in the **standard\
+            \ format**:\n\n\n```\nAs a <Role>, I want <Intention>, So that <Benefit>.\n\
+            ```\n\n\n### Acceptance Criteria Set {\\<C\\*, E, EO\\*>}\n\n\n* `<C*>`\
+            \ = {C1, C2, … Cm} = a **set of Contexts**\n* `<E>` = Event = one or more\
+            \ **triggering events**\n* `<EO*>` = {EO1, EO2, … Ek} = a **set of Expected\
+            \ Outcomes**\n\n\nA user story may have one or more acceptance criteria,\
+            \ each expressed in **Gherkin style** and represented as a structured\
+            \ tuple:\n\n\n```\nGiven <Context>\n  [And <More Context>...]\nWhen <Event>\n\
+            Then <Expected Outcome>\n  [And <More Expected Outcome>...]\n```\n\n\n\
+            ---\n\n\n## Quality Criterion Definition\n\n\n1. **Well-formed**\n   A\
+            \ user story must be considered **well-formed** when its description contains\
+            \ the essential structural elements.\n\n\nSpecifically, the description\
+            \ must explicitly include at least:\n* Role (R) – the actor or stakeholder\
+            \ who benefits from the story.\n* Intention (I) – the goal or capability\
+            \ that the role seeks to achieve.\n\n\nWithout both elements, the story\
+            \ cannot be regarded as well-formed.\n\n\n2. **Minimal**\n   A user story\
+            \ is **minimal** when its description contains only a Role, an Intention,\
+            \ and optionally a Benefit. Any additional information such as comments,\
+            \ descriptions of expected behavior, or testing hints are to be captured\
+            \ as additional notes.\n\n\n3. **Atomic**\n   A user story is **atomic**\
+            \ when its Intention description expresses the need for **exactly one\
+            \ feature**. It must not combine multiple independent requirements or\
+            \ features within a single story.\n\n\n4. **Unambiguous**\n   A user story\
+            \ must be considered **unambiguous** when both its **description** and\
+            \ **acceptance criteria (AC)** avoid vague or imprecise terms that can\
+            \ lead to multiple interpretations.\n\n\n5. **Problem-oriented**\n   A\
+            \ user story is **problem-oriented** when its **description** states a\
+            \ **need or problem to be solved** rather than prescribing the implementation\
+            \ details.\n\n\n6. **Conceptually Sound**\n   A user story is **conceptually\
+            \ sound** when each of its key fields (when present) expresses the *intended\
+            \ concept*:\n\n\n* `<R>` = **Role** → an actor or stakeholder (who).\n\
+            * `<I>` = **Intention** → a goal or action the role wants (what).\n* `<B>`\
+            \ = **Benefit** → the value or advantage gained (why).\n* `<C>` = **Context**\
+            \ → a condition or pre-state (Given).\n* `<E>` = **Event** → a triggering\
+            \ action (When).\n* `<EO>` = **Expected Outcome** → an observable result\
+            \ or system response (Then).\n\n\n7. **Internal Consistency**\n   A user\
+            \ story is **internally consistent** when its **description** is logically\
+            \ aligned and free of contradictions.\n\n\n---\n\n\n## Instructions\n\n\
+            \n1. **Analyze the Feedback:** Carefully examine the **Quality Feedback\
+            \ Report**. Your primary goal is to address the specific **Reason for\
+            \ Violation** by rewriting the user story.\n2. **Review from Wiki (optional):**\
+            \ If the **Information from Wiki** is provided, you may use it to better\
+            \ understand the related business domain or module before rewriting. \n\
+            3. **Preserve Core Intent:** You must NOT invent new requirements or delete\
+            \ existing ones. Your job is to restructure and refine how the requirements\
+            \ are expressed to meet the quality standards. The core functionality\
+            \ described in the original story must be fully preserved.\n4. **Handle\
+            \ Story Splitting:** You must NOT split the story unless BOTH of the following\
+            \ are true: \n    a) The **Quality Feedback Report** explicitly states\
+            \ a violation of the Atomic criterion OR the Rewrite Reference Examples\
+            \ explicitly show a split for the same type of violation. \n    b) The\
+            \ split is necessary to ensure each story contains exactly one independent\
+            \ feature. \n    If these conditions are not met, you must keep the story\
+            \ as a single, unified user story.\n\n    If these conditions are met,\
+            \ you must ensure that each resulting split story adheres to the following\
+            \ rules:\n\n     * Each new story must have its own \"As a / I want /\
+            \ So that\" statement.\n     * Distribute the original detailed description\
+            \ and Acceptance Criteria to the most relevant new story.\n     * Each\
+            \ new story must be **self-contained**, meaning it can be understood,\
+            \ developed, and tested independently.\n5. **Ensure Consistency:** After\
+            \ revision, ensure that the main story statement, any descriptive notes,\
+            \ and the Acceptance Criteria are all perfectly aligned within each new\
+            \ story.\n5. **Ensure Consistency:** After revision, ensure that the main\
+            \ story statement, any descriptive notes, and the Acceptance Criteria\
+            \ are all perfectly aligned within each new story.\n6. **Strict Output\
+            \ Format and Behavior:** You must strictly follow the output format detailed\
+            \ below. Do NOT include any explanations, introductions, summaries, or\
+            \ commentary.\n\n\n   * If multiple stories are produced, each must begin\
+            \ with `--- REVISED USER STORY X ---` on its own line.\n   * Do not merge\
+            \ multiple stories into one section.\n   * Your response MUST consist\
+            \ ONLY of the revised user story/stories in the format below.\n7. **Fact-Checking\
+            \ Checklist**: Before outputting the final revised story/stories, you\
+            \ must verify them against the Fact-Checking Checklist. Only output stories\
+            \ that satisfy all checklist items.\n\n\n---\n\n\n## Fact-Checking Checklist\n\
+            \n\nBefore finalizing the revised user story, verify it against the following\
+            \ checklist:\n\n\n1. **Role Validation** – Is the role (`<R>`) a real\
+            \ and valid actor in the system or organization context?\n2. **Intention\
+            \ Alignment** – Does the intention (`<I>`) describe a feasible capability\
+            \ or action that this role can actually perform in the domain?\n3. **Benefit\
+            \ Relevance** – Is the benefit (`<B>`) logically connected to the role’s\
+            \ needs and the system’s purpose?\n4. **Acceptance Criteria Consistency**\
+            \ – Do the ACs (`<C*, E, EO*>`) match the functionality implied by the\
+            \ story description, without introducing new or contradictory requirements?\n\
+            5. **Domain Accuracy** – Does the story align with factual knowledge of\
+            \ the product/module (including any **Information from Wiki**, if provided)?\n\
+            6. **Terminology Correctness** – Are terms, system components, or modules\
+            \ used in a way that is factually correct within the given domain context?\n\
+            7. **No Unsupported Assumptions** – The story should not introduce new\
+            \ assumptions, external tools, or system behaviors that are not supported\
+            \ by the original story, feedback, or wiki context.\n\n\n---\n\n\n{{#context#}}\n\
+            \n\n---\n\n\n## Required Output Format\n\n### Single Story Case:\n```\n\
+            --- REVISED USER STORY 1 ---\n\n**As a** [Revised Role]\n**I want** [Revised,\
+            \ focused Intention]\n**So that** [Revised Benefit]\n\n**Notes:**\n[Optional:\
+            \ Include ONLY relevant parts of the original description that are necessary\
+            \ for clarity in THIS specific story. Do not introduce new requirements\
+            \ or assumptions.]\n\n**Acceptance Criteria (Gherkin style):**\n[List\
+            \ ONLY the Acceptance Criteria relevant to THIS specific story. You may\
+            \ need to rephrase or extract them from the original.]\n\n```\n\n### Multiple\
+            \ Stories Case (only if splitting is explicitly required):\n```\n--- REVISED\
+            \ USER STORY 1 ---\n(...)\n\n--- REVISED USER STORY 2 ---\n(...)\n\n```\n\
+            \n---\n\n\n## Final Output Reference Example\n\n\n```\nAs a delivery person\n\
+            I want to connect my Mobile Device with a mobile printer\nSo that I can\
+            \ print documents or labels directly from my device\n\n\n---\nNotes:\n\
+            The Mobile Device can be connected to any mobile printer. After successful\
+            \ login, all existing printer connections are removed. A connection is\
+            \ automatically established by the operating system by holding the Mobile\
+            \ Device to a mobile printer (approx. 2 cm maximum distance). If no or\
+            \ more than one printer is connected for an upcoming print, the actor\
+            \ is prompted to hold the Mobile Device to a printer. Using the tile in\
+            \ the print menu, the actor can manually remove all connections.\n\n\n\
+            Acceptance Criteria:\nGiven I am logged into the Mobile Device\nWhen I\
+            \ hold the Mobile Device close to a switched-on mobile printer (within\
+            \ 2 cm maximum distance)\nThen the connection should be automatically\
+            \ established by the operating system\nAnd the toast message “Mobile printer\
+            \ successfully connected” should be displayed\nAnd I should hear an acoustic\
+            \ tone indicating successful connection\n\n\nGiven I have multiple printers\
+            \ connected\nWhen I manually remove all connections using the tile in\
+            \ the print menu\nThen all existing printer connections should be removed\n\
+            \n\nGiven another delivery person logs in on the same Mobile Device\n\
+            When they log in successfully\nThen the current printer connection should\
+            \ be terminated\n```"
+        - id: 322f8028-c798-4608-ad5b-efe5f562e3a8
+          role: user
+          text: '### ** Quality Feedback Report**
+
+
+            {{#1757834402979.reports#}}
+
+
+            -----
+
+
+            ### **Here is the user story you need to refine**
+
+
+            {{#1757833557961.user_story#}}'
+        selected: false
+        title: 故事改写
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 87
+      id: '1757840006979'
+      position:
+        x: 3650.5178713450205
+        y: -44.79325977476868
+      positionAbsolute:
+        x: 3650.5178713450205
+        y: -44.79325977476868
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1757840006979'
+          - text
+          value_type: string
+          variable: text
+        selected: false
+        title: 返回改写后的故事
+        type: end
+      height: 87
+      id: '1757840049491'
+      position:
+        x: 3928.5998667536333
+        y: -44.79325977476868
+      positionAbsolute:
+        x: 3928.5998667536333
+        y: -44.79325977476868
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1757834402979'
+          - reports
+          value_type: string
+          variable: result1
+        selected: false
+        title: 故事无质量问题
+        type: end
+      height: 87
+      id: '1757840097881'
+      position:
+        x: 3083.584240134085
+        y: 176.8840692350773
+      positionAbsolute:
+        x: 3083.584240134085
+        y: 176.8840692350773
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        dataset_ids:
+        - kH9VC+t8kTq2TVoCIDgfOL9hd+eTrDSX/XcKjszQvL3M3IfuSTw3SFcFUV0J4oG/
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: true
+          reranking_mode: reranking_model
+          reranking_model:
+            model: gte-rerank-v2
+            provider: langgenius/tongyi/tongyi
+          score_threshold: 0.1
+          top_k: 5
+        query_attachment_selector: []
+        query_variable_selector:
+        - '1757834402979'
+        - violations
+        retrieval_mode: multiple
+        selected: false
+        title: 检索改写案例
+        type: knowledge-retrieval
+      height: 89
+      id: '1757943666002'
+      position:
+        x: 3083.584240134085
+        y: -111.9156909197989
+      positionAbsolute:
+        x: 3083.584240134085
+        y: -111.9156909197989
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        dataset_ids:
+        - BynxPKorVnNHz/Vx5okK8EwgJVfSeHLj2z9QSVa1hCNkNkOUczizJg40maDSAeJ2
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: true
+          reranking_mode: reranking_model
+          reranking_model:
+            model: gte-rerank-v2
+            provider: langgenius/tongyi/tongyi
+          score_threshold: 0.5
+          top_k: 2
+        query_attachment_selector: []
+        query_variable_selector:
+        - '1757833557961'
+        - user_story
+        retrieval_mode: multiple
+        selected: false
+        title: Wiki检索
+        type: knowledge-retrieval
+      height: 89
+      id: '1757943671051'
+      position:
+        x: 3083.584240134085
+        y: 12.559959968887597
+      positionAbsolute:
+        x: 3083.584240134085
+        y: 12.559959968887597
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        code: "def main(q_wiki, q_rewrite) -> dict:\n    wikis = [wiki.get('content')\
+          \ for wiki in q_wiki]\n    rws = [rw.get('content') for rw in q_rewrite]\n\
+          \n    querys_from_wiki = '\\n'.join(wikis) if wikis else ''\n    rewrite_examples\
+          \ = '\\n'.join(rws) if rws else ''\n\n    context = f'''\n## Information\
+          \ From Wiki:\n\n{querys_from_wiki}\n\n---\n\n## Rewrite Reference Examples:\n\
+          \n{rewrite_examples}\n\n'''\n    return {\"context\": context}\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          context:
+            children: null
+            type: string
+        selected: false
+        title: 合并检索上下文
+        type: code
+        variables:
+        - value_selector:
+          - '1757943671051'
+          - result
+          value_type: array[object]
+          variable: q_wiki
+        - value_selector:
+          - '1757943666002'
+          - result
+          value_type: array[object]
+          variable: q_rewrite
+      height: 51
+      id: '1757944402740'
+      position:
+        x: 3375.9977514782713
+        y: -44.79325977476868
+      positionAbsolute:
+        x: 3375.9977514782713
+        y: -44.79325977476868
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        author: henrylau93@qq.com
+        desc: ''
+        height: 108
+        selected: false
+        showAuthor: false
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"","text":"质量准则评估","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textFormat":0,"textStyle":""}],"direction":"ltr","format":"","indent":0,"type":"root","version":1}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 248
+      height: 108
+      id: '1758373242710'
+      position:
+        x: 1823.4837286214602
+        y: -539.5207518164923
+      positionAbsolute:
+        x: 1823.4837286214602
+        y: -539.5207518164923
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 248
+    - data:
+        author: henrylau93@qq.com
+        desc: ''
+        height: 88
+        selected: false
+        showAuthor: false
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"","text":"根据违反准则检索改写案例库以及根据故事描述检索WIKI","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textFormat":0,"textStyle":""}],"direction":"ltr","format":"","indent":0,"type":"root","version":1}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 240
+      height: 88
+      id: '1758373602936'
+      position:
+        x: 3083.584240134085
+        y: -237.0145977050089
+      positionAbsolute:
+        x: 3083.584240134085
+        y: -237.0145977050089
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 240
+    viewport:
+      x: -1665.033831549201
+      y: 397.27372775071086
+      zoom: 1.001690836248323
+  rag_pipeline_variables: []
